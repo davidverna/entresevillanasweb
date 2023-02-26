@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Entre Sevillanas</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+@font-face { font-family: GLSNECB; src: url(fonts/GLSNECB.TTF);}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.myslides {
+    display: none;
+}
+
+h1 {
+    font-family: GLSNECB;
+    font-size: 110px;
+}
+
+h2 {
+    font-family: GLSNECB;
+    font-size: 90px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-family: GLSNECB;
+    font-size: 30px;
+    text-align: center;
+    margin: 50px 0 20px;
+}
+
+h4 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.membersimages {
+    display: flex;
+    margin: 80px 0 50px;
+}
+
+.audioinfo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 80px;
+}
+
+.youtubesection {
+  margin: 30px 0 30px;
+}
+
+.Scriptcontent{
+	display: flex;
+}
+
+.auto-slider{
+    position: relative;
+    box-sizing: content-box;
+    display: inline-block;
+    padding: 5px 5px 5px;
+    background: rgb(255, 255, 255);
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+
+}
+
+@keyframes sliding {
+    0%{left: 0%;}
+    4%{left: -100%;}
+    8%{left: -200%;}
+    12%{left: -300%;}
+    16%{left: -400%;}
+    20%{left: -500%;}
+    24%{left: -600%;}
+    28%{left: -700%;}
+    32%{left: -800%;}
+    36%{left: -900%;}
+    40%{left: -1000%;}
+    44%{left: -1100%;}
+    48%{left: -1200%;}
+    52%{left: -1300%;}
+    56%{left: -1400%;}
+    60%{left: -1500%;}
+    64%{left: -1600%;}
+    68%{left: -1700%;}
+    72%{left: -1800%;}
+    76%{left: -1900%;}
+    80%{left: -2000%;}
+    84%{left: -2100%;}
+    88%{left: -2200%;}
+    92%{left: -2300%;}
+    100%{left: 0%;}
+        }
+        
+@keyframes indicating {
+            from{
+                left: -100%;
+            }
+            to{
+                left: 0;
+            }
+}
+
+#slider {
+    overflow: hidden;
+}
+
+#slider figure img {
+    width: 20%; float: left;
+}
+
+#slider figure {
+    display: flex;
+    position: relative;
+    width: 2400%;
+    margin: 0;
+    animation: 20s sliding ease infinite;
+}
+
+.buhocaribu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.w3-medium {
+  margin-top: 50px;
+}
+
+.visitorcounter {
+  display: none;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+      href="javascript:void(0)"
+      onclick="toggleMenu()"
+      title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NOSOTROS</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SHOWS</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACTO</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navMobile" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">NOSOTROS</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">SHOWS</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">CONTACTO</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="myslides w3-display-container w3-center">
+    <img src="images/image1.jpg" alt="Imagend de Entre Sevillanas 1" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h1>ENTRE SEVILLANAS</h1>
+      <p><b>BORDER SWING</b></p>   
+    </div>
+  </div>
+  <div class="myslides w3-display-container w3-center">
+    <img src="images/image2.jpg" alt="Imagend de Entre Sevillanas 2" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h1>ENTRE SEVILLANAS</h1>
+      <p><b>BORDER SWING</b></p>    
+    </div>
+  </div>
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">ENTRE SEVILLANAS</h2>
+    <p style="margin-bottom: 50px;"><b>BORDER SWING</b></p>   
+    <p class="w3-opacity"><i>NOSOTROS<i></p>
+    <p>Entre Sevillanas es un quintento de border swing formado por tres guitarras españolas, contrabajo, batería y 4 voces. El conjunto transporta al espectador a principios del siglo XX con su característico sonido y puesta en escena.</p>
+    <div class="membersimages">
+      <div class="w3-third">
+        <p>Johnpol</p>
+        <img src="images/juanpablomarinimage.jpg" class="w3-round" alt="Juan Pablo Marín" title="Juan Pablo Marín" style="width:70%">
+      </div>
+      <div class="w3-third">
+        <p>Pipa</p>
+        <img src="images/emmanuelluscherimage.jpg" class="w3-round w3-margin-bottom" alt="Emmanuel Lüscher" title="Emmanuel Lüscher" style="width:70%">
+      </div>
+      <div class="w3-third">
+        <p>Ariel</p>
+        <img src="images/arielvercesiimage.jpg" class="w3-round w3-margin-bottom" alt="Ariel Vercesi" title="Ariel Vercesi" style="width:70%">
+      </div>
+      <div class="w3-third">
+        <p>Edu</p>
+        <img src="images/eduardoteisaimage.jpg" class="w3-round w3-margin-bottom" alt="Eduardo Teisa" title="Eduardo Teisa" style="width:70%">
+      </div>
+            <div class="w3-third">
+        <p>David</p>
+        <img src="images/davidvernaimage.jpg" class="w3-round w3-margin-bottom" alt="David Verna" title="David Verna" style="width:70%">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-15 w3-center w3-light-grey w3-xxlarge">
+    <h4>¡Seguinos en nuestras redes!</h4>
+    <a href="https://es-la.facebook.com/EntreSevillanas1/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/entresevillanas/?hl=es" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.youtube.com/user/entresevillanas" target="_blank"><i class="fa fa-youtube w3-hover-opacity"></i></a>
+  </div>
+
+  <h4 style="margin: 100px 0 20px; background-color:rgb(241, 241, 241)">CONOCENOS Y ESCUCHANOS</h4>
+
+  <!-- YouTube And Spotify Section -->
+  <div class="audioinfo">
+    <div class="youtubesection">
+  <iframe
+    src="https://www.youtube.com/embed/NG3O26wI_P4"
+    allow="fullscreen">
+  </iframe>
+  </div>
+
+  <iframe style="border-radius:12px"
+    src="https://open.spotify.com/embed/artist/3U06F4k9XWGu6Hw4fN3592?utm_source=generator"
+    width="70%"
+    height="300"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+  </iframe>
+  </div>
+
+ <!-- The Upcoming Shows Section -->
+ <div class="w3-black" id="tour">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:350px">
+    <h2 class="w3-wide w3-center">SHOWS</h2>
+  </div>
+</div>
+
+    <!-- The Performed Shows Section -->
+    <div class="w3-black" id="tour">
+      <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+        <h4 class="w3-center"><i>ULTIMOS</h4>
+        <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+          <div class="w3-third w3-margin-bottom">
+            <img src="images/performedshow1.jpg" alt="Entre Sevillanas en Capitan Bar" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+              <p><b>Entre Sevillanas + Los Beretta + Ale Gallo</b></p>
+              <p class="w3-opacity">14/08/2022 - Rosario</p>
+              <p>La mística sevillana se hizo presente en Capitan Bar.</p>
+              <button class="w3-button w3-black w3-margin-bottom"><a href="https://www.instagram.com/p/Cgc6TlJFTA-/?hl=es" target="_blank">Más info</a></button>
+            </div>
+          </div>
+          <div class="w3-third w3-margin-bottom">
+            <img src="images/performedshow2.jpeg" alt="Entre Sevillanas en Beatmemo (Rosario)" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+              <p><b>Entre Sevillanas Live Show en Beatmemo</b></p>
+              <p class="w3-opacity">19/07/2022 - Rosario</p>
+              <p>Entre Sevillanas pisó fuerte en el bar tributo a The Beatles.</p>
+              <button class="w3-button w3-black w3-margin-bottom"><a href="https://fb.watch/enfd18q3h6/?mibextid=otigII" target="_blank">Ver show</a></button>
+            </div>
+          </div>
+          <div class="w3-third w3-margin-bottom">
+            <img src="images/performedshow3.jpg" alt="Entre Sevillanas en Puerto De Ideas" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+              <p><b>Entre Sevillanas en Puerto De Ideas</b></p>
+              <p class="w3-opacity">02/07/2022 - Rosario</p>
+              <p>El border swing colaboró con el ciclo solidario Bandera Negra.</p>
+              <button class="w3-button w3-black w3-margin-bottom"><a href="https://www.instagram.com/p/CfZaCksL0w8/?hl=es" target="_blank">Más info</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- The Carousel Section -->
+  <h4 class="w3-center"><i>FLASHBACK FLYERS</h4>
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+  <section>
+        <div class="Scriptcontent">
+          <section class="auto-slider">
+            <div id="slider">
+              <figure>
+                <img src="images/historyimage-01.jpg" alt="Flyer antiguo de la banda 1">
+                <img src="images/historyimage-02.jpg" alt="Flyer antiguo de la banda 2">
+                <img src="images/historyimage-03.jpg" alt="Flyer antiguo de la banda 3">
+                <img src="images/historyimage-04.jpg" alt="Flyer antiguo de la banda 4">
+                <img src="images/historyimage-05.jpg" alt="Flyer antiguo de la banda 5">
+                <img src="images/historyimage-06.jpg" alt="Flyer antiguo de la banda 6">
+                <img src="images/historyimage-07.jpg" alt="Flyer antiguo de la banda 7">
+                <img src="images/historyimage-08.jpg" alt="Flyer antiguo de la banda 8">
+                <img src="images/historyimage-09.jpg" alt="Flyer antiguo de la banda 9">
+                <img src="images/historyimage-10.jpg" alt="Flyer antiguo de la banda 10">
+                <img src="images/historyimage-11.jpg" alt="Flyer antiguo de la banda 11">
+                <img src="images/historyimage-12.jpg" alt="Flyer antiguo de la banda 12">
+                <img src="images/historyimage-13.jpg" alt="Flyer antiguo de la banda 13">
+                <img src="images/historyimage-14.jpg" alt="Flyer antiguo de la banda 14">
+                <img src="images/historyimage-15.jpg" alt="Flyer antiguo de la banda 15">
+                <img src="images/historyimage-16.jpg" alt="Flyer antiguo de la banda 16">
+                <img src="images/historyimage-17.jpg" alt="Flyer antiguo de la banda 17">
+                <img src="images/historyimage-18.jpg" alt="Flyer antiguo de la banda 18">
+                <img src="images/historyimage-19.jpg" alt="Flyer antiguo de la banda 19">
+                <img src="images/historyimage-20.jpg" alt="Flyer antiguo de la banda 20">
+                <img src="images/historyimage-21.jpg" alt="Flyer antiguo de la banda 21">
+                <img src="images/historyimage-22.jpg" alt="Flyer antiguo de la banda 22">
+                <img src="images/historyimage-23.jpg" alt="Flyer antiguo de la banda 23">
+                <img src="images/historyimage-24.jpg" alt="Flyer antiguo de la banda 24">
+              </figure>
+            </div>
+          </section>       
+        </div>
+</section>
+</div>
+  </div>
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACTO</h2>
+    <p class="w3-opacity w3-center"><i>¿Te gusta la banda? ¡Contactate!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i>Argentina<br>
+        <i class="fa fa-whatsapp" style="width:30px"></i>Contrataciones: <a href="https://wa.me/+5493416765069">+54 9 3416765069</a></a><br>
+        <i class="fa fa-envelope" style="width:30px"> </i>Email: <a href="mailto:entresevillanas@gmail.com">entresevillanas@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+<!-- websmultimedia.com's Visitor Counter -->
+<div class="visitorcounter">
+  <a>
+  <img  style="border: 0px solid; display: inline;"
+    alt="contador de visitas"
+    src="https://websmultimedia.com/contador-de-visitas.php?id=435"></a>
+</div>
+
+<!-- Footer -->
+<footer class=" w3-padding-10 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <p class="w3-medium">Made by David Verna. Web template powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>.</p>
+</footer>
+
+<script>
+// Automatic Slideshow
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("myslides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);
+}
+
+function toggleMenu() {
+  var x = document.getElementById("navMobile");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
